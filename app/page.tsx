@@ -91,7 +91,7 @@ export default function Home() {
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-lg">
+                  <Button size="lg" variant="outline" className="border-white text-black hover:bg-white/10 px-8 py-6 text-lg rounded-lg">
                     Learn More
                   </Button>
                 </div>
@@ -113,9 +113,9 @@ export default function Home() {
           </div>
           
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-50 via-transparent to-gray-50 z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-50/50 via-transparent to-gray-50/50 z-10 pointer-events-none" />
             <div className="overflow-hidden">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 py-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 py-8">
                 {brands.map((brand, index) => (
                   <div
                     key={`${brand.name}-${index}`}
@@ -127,7 +127,7 @@ export default function Home() {
                         alt={brand.name}
                         width={150}
                         height={75}
-                        className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter group-hover:brightness-110"
+                        className="object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter group-hover:brightness-110 min-w-[80px] max-w-[150px] min-h-[40px] max-h-[75px]"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-primary/5 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
                         {/* <span className="text-sm font-medium text-primary">

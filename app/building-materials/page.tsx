@@ -1,43 +1,123 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { CheckCircle } from "lucide-react";
 
 export default function BuildingMaterials() {
   const materials = [
     {
-      category: "Concrete & Cement",
-      items: ["Portland Cement", "Ready-Mix Concrete", "Concrete Blocks"],
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?fit=crop&w=800&h=400"
+      title: "Tools",
+      description: "High-quality tools",
+      image: "/building-materials/tools-building-materials-alegaby.jpg",
+      points: [
+        "Makita",
+        "Uken",
+        "Stanley",
+        "Dewalt",
+        "Bosch",
+        "Rothenberger"
+      ]
     },
     {
-      category: "Steel & Metals",
-      items: ["Structural Steel", "Reinforcement Bars", "Metal Sheets"],
-      image: "https://images.unsplash.com/photo-1530469525856-cf37954301f7?fit=crop&w=800&h=400"
+      title: "Construction Materials",
+      description: "High-quality construction materials",
+      image: "/building-materials/construction-building-materials-alegaby.webp",
+      points: [
+        "Cement",
+        "White Cement",
+        "Gypsum",
+        "Gypsum Panel",
+        "Gypsum Tile",
+        "Tiles"
+      ]
     },
     {
-      category: "Wood & Lumber",
-      items: ["Plywood", "Timber", "Wooden Beams"],
-      image: "https://images.unsplash.com/photo-1520627977056-c307aeb9a625?fit=crop&w=800&h=400"
+      title: "Painting Materials",
+      description: "High-quality painting materials",
+      image: "/building-materials/paint-building-materials-alegaby.webp",
+      points: [
+        "Jotun",
+        "National Paints",
+        "Berger Paints",
+        "Paint Brush",
+        "Roller",
+        "Thinners"
+      ]
     },
     {
-      category: "Insulation",
-      items: ["Fiberglass", "Foam Boards", "Mineral Wool"],
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?fit=crop&w=800&h=400"
-    }
+      title: "Hardware & Fasteners",
+      description: "High-quality hardware and fasteners",
+      image: "/building-materials/fastners-building-materials-alegaby.webp",
+      points: [
+        "Nut",
+        "Bolt",
+        "Washer",
+        "Anchor Bolt",
+        "Threaded Rods",
+        "Channels",
+        "Clamps",
+        "Shovel",
+        "Plywood",
+        "Insulation Tape",
+        "Aluminum Tape",
+        "Aluminum Glass Tape",
+        "Foam Tape",
+        "Sealants",
+      ]
+    },
+    {
+      title: "Electrical Plumbing & Sanitary",
+      description: "High-quality electrical, plumbing and sanitary materials",
+      image: "/building-materials/plumbing-sanitary-alegaby.webp",
+      points: [
+        "RAK Ceramics",
+        "Grohe",
+        "Cosmoplast",
+        "Raktherm",
+        "Pegler",
+        "Milano",
+        "Schnider",
+        "MK",
+        "Ducab",
+      ]
+    },
+    {
+      title: "Valves",
+      description: "Professional-grade paints and coatings",
+      image: "/hvac/valves-hvac-honeywell.jpg",
+      points: [
+        "Herz",
+        "Pegler",
+        "Crane",
+      ]
+    },
+    {
+      title: "Safety Products",
+      description: "Complete plumbing solutions",
+      image: "/building-materials/safety-products-building-materials-alegaby.jpg",
+      points: [
+        "Lock",
+        "Safety Jacket",
+        "Helmet",
+        "Safety Shoes",
+        "Mask",
+        "Sanitizer",
+      ]
+    },
   ];
 
   return (
-    <div>
+    <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-[400px]">
+      <section className="relative h-[500px]">
         <Image
-          src="https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&w=1920&q=80"
+          src="/building-materials/building-materials.jpg"
           alt="Building Materials"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
+        <div className="absolute inset-0 bg-black bg-opacity-60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -52,28 +132,34 @@ export default function BuildingMaterials() {
       </section>
 
       {/* Materials Section */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Product Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h2 className="text-3xl font-bold text-center mb-16">Our Product Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {materials.map((material) => (
-              <div key={material.category} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div className="relative h-48">
+              <div key={material.title} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                <div className="relative h-56 w-full">
                   <Image
                     src={material.image}
-                    alt={material.category}
+                    alt={material.title}
                     fill
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">{material.category}</h3>
-                  <ul className="space-y-2 mb-4">
-                    {material.items.map((item) => (
-                      <li key={item} className="text-gray-600">• {item}</li>
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3">{material.title}</h3>
+                  <p className="text-gray-600 mb-4">{material.description}</p>
+                  
+                  <div className="space-y-2 mb-6 flex-grow">
+                    {material.points.map((point, index) => (
+                      <div key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 mr-2" />
+                        <span className="text-gray-700">{point}</span>
+                      </div>
                     ))}
-                  </ul>
-                  <Button asChild>
+                  </div>
+                  
+                  <Button asChild className="w-full mt-auto">
                     <Link href="/contact">Request Quote</Link>
                   </Button>
                 </div>
@@ -84,51 +170,43 @@ export default function BuildingMaterials() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Choose Our Materials?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We source only the highest quality materials from trusted manufacturers,
-              ensuring durability and reliability for your construction projects.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Quality Assured",
-                description: "All materials meet or exceed industry standards"
-              },
-              {
-                title: "Competitive Pricing",
-                description: "Best value for premium construction materials"
-              },
-              {
-                title: "Expert Support",
-                description: "Technical guidance and product recommendations"
-              }
-            ].map((feature) => (
-              <div key={feature.title} className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary text-primary-foreground rounded-lg p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Need Materials for Your Project?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Contact us for competitive quotes and expert advice on selecting the
-              right materials for your construction needs.
-            </p>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-8">Why Choose Our Materials?</h2>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <span className="h-6 w-6 text-primary mr-3 flex-shrink-0">✓</span>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Quality Assured</h3>
+                    <p className="text-gray-600">All materials meet or exceed industry standards for durability and performance.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="h-6 w-6 text-primary mr-3 flex-shrink-0">✓</span>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Competitive Pricing</h3>
+                    <p className="text-gray-600">Best value for premium construction materials with transparent pricing.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="h-6 w-6 text-primary mr-3 flex-shrink-0">✓</span>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-1">Expert Support</h3>
+                    <p className="text-gray-600">Technical guidance and product recommendations from experienced professionals.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="relative h-[500px] rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?fit=crop&w=800&h=800"
+                alt="Building Materials"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
