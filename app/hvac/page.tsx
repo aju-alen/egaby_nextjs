@@ -8,17 +8,19 @@ export default function HVAC() {
     {
       title: "Thermostats",
       description: "All kinds of Thermostats",
-      image: "/hvac/honeywell-hvac.jpg",
+      image: "/hvac/honeywell-thermostat-alegaby.jpg",
       points: [
         "Honeywell",
+        "Resideo",
         "Siemens",
         "White-Rodgers",
+
       ]
     },
     {
       title: "Compressors",
       description: "All kinds of Compressors",
-      image: "/hvac/compressor-hvac-honeywell.jpg",
+      image: "/hvac/copeland-compressor-alegaby.jpg",
       points: [
         "Tecumseh",
         "Bristol",
@@ -44,7 +46,7 @@ export default function HVAC() {
     {
       title: "Refrigerants",
       description: "All kinds of Refrigerants",
-      image: "/hvac/refrigerants-hvac-alegaby.jpeg",
+      image: "/hvac/refrigerants-copeland-refron-mitsubishi-alegaby.jpeg",
       points: [
         "Honeywell",
         "Refron",
@@ -97,7 +99,7 @@ export default function HVAC() {
     {
       title: "Motors",
       description: "All kinds of Motors",
-      image: "/hvac/motor-hvac-alegaby.webp",
+      image: "/hvac/motors-hvac-alegaby.jpg",
       points: [
         "GE",
         "Pioneer",
