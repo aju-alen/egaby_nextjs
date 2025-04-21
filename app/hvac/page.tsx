@@ -44,7 +44,7 @@ export default function HVAC() {
     {
       title: "Refrigerants",
       description: "All kinds of Refrigerants",
-      image: "/hvac/refrigerants-hvac-honewell.webp",
+      image: "/hvac/refrigerants-hvac-alegaby.jpeg",
       points: [
         "Honeywell",
         "Refron",

@@ -45,7 +45,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
               {/* <Building2 className="h-8 w-8 text-primary transition-transform group-hover:scale-110" /> */}
-              <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              <span className="font-bold text-2xl bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
                 Al Egaby Gen. Tr. (L.L.C)
               </span>
             </Link>
