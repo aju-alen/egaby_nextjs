@@ -11,6 +11,11 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  // Hide navbar on home page
+  // if (pathname === "/") {
+  //   return null;
+  // }
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
