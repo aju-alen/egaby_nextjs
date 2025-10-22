@@ -1,4 +1,4 @@
-import { Building2, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
